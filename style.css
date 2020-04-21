@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sez-header {
+  height: 90px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boolflix h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.input-film, .cerca-film {
+  height: 30px;
+  font-size: 17px;
+  border-radius: 12px;
+}
+
+.cerca-film{
+  width: 70px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.container-film{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cover-film{
+  border: solid 1px black;
+  width: 250px;
+  height: 350px;
+  margin: 30px 40px;
+  cursor: pointer;
+}

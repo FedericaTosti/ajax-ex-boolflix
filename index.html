@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoolFlix</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="sez-header">
+        <div class="boolflix">
+          <h1>BoolFlix</h1>
+        </div>
+
+        <div class="ricerca">
+          <input class="input-film" type="text" name="" value="" placeholder=" Inserisci qui il titolo">
+          <button class="cerca-film" type="button" name="button">Cerca</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-film">
+        
+      </div>
+    </main>
+
+    <!-- template handlebars js -->
+    <script id="film-template" type="text/x-handlebars-template">
+      <div class="cover-film">
+        <div>
+          <img src="" alt="">
+        </div>
+
+        <h3>Titolo: {{title}}</h3>
+        <h5>Titolo Originale: {{original_title}}</h5>
+        <p>Lingua: {{original_language}}</p>
+        <p>Voto: {{vote}}</p>
+      </div>
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="main.js"> </script>
+  </body>
+</html>
