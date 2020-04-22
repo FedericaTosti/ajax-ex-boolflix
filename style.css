@@ -5,7 +5,11 @@
 }
 
 .sez-header {
+  position: fixed;
   height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: black;
   display: flex;
   justify-content: space-around;
@@ -30,7 +34,7 @@
 }
 
 .container-film{
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -43,4 +47,10 @@
   height: 350px;
   margin: 30px 40px;
   cursor: pointer;
+}
+
+.cover-film img{
+  width: 65%;
+  height: 65%;
+  margin-left: 17.5%;
 }

@@ -50,7 +50,8 @@ $(document).ready(function(){
             "title" : singoloFilm.title,
             "original_title" : singoloFilm.original_title,
             "vote" : singoloFilm.vote_average,
-            "original_language" : singoloFilm.original_language
+            "original_language" : singoloFilm.original_language,
+            "img" : "https://image.tmdb.org/t/p/w500" + singoloFilm.poster_path
           };
 
           // stampo in pagina tramite handlebars
