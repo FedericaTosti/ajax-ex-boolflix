@@ -43,9 +43,9 @@
 
 .cover-film{
   border: solid 1px black;
-  width: 250px;
-  height: 350px;
-  margin: 30px 40px;
+  width: 280px;
+  height: 400px;
+  margin: 30px 20px;
   cursor: pointer;
 }
 
@@ -53,4 +53,18 @@
   width: 65%;
   height: 65%;
   margin-left: 17.5%;
+}
+
+.fas.fa-star {
+  color: yellow;
+}
+
+.img-bandiera{
+  width: 28px;
+  display: flex;
+}
+
+.lingue{
+  /* border-radius: 100px; */
+  margin-top: 3px;
 }
