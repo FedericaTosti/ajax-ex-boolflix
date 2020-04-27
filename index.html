@@ -31,7 +31,7 @@
     <!-- template handlebars js -->
     <script id="film-template" type="text/x-handlebars-template">
       <div class="cover-film">
-        <div>
+        <div class="cover-film-img">
           <img src="{{img}}" alt="">
         </div>
 
@@ -39,11 +39,12 @@
         <!-- handlebars tramite le graffe aggiunte riconosce e tratta quel valore come codice html e non come stringa da stampare cosi come si vede -->
         <div class="cover-film-info">
           <h3>Titolo: {{title}}</h3>
-          <h5>Titolo Originale: {{original_title}}</h5>
+          <h4>{{TitoloOriginale}} <span>{{original_title}}</span></h4>
           <p class="img-bandiera">Lingua: {{{original_language}}}</p>
           <p>Voto: {{{voteNumber}}}</p>
           <p>Stelline: {{{vote}}}</p>
           <p>Categoria: {{type}}</p>
+          <p>Descrizione: {{plot}}</p>
         </div>
       </div>
     </script>

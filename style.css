@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #9ba2de;
+}
+
 .sez-header {
   position: fixed;
   height: 90px;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #212138;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,17 +46,28 @@
 }
 
 .cover-film{
+  background-color: white;
   border: solid 1px black;
   width: 280px;
   height: 400px;
   margin: 30px 20px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
-.cover-film img{
-  width: 65%;
-  height: 65%;
-  margin-left: 17.5%;
+.cover-film-img{
+  width: 100%;
+  height: 100%;
+}
+
+.cover-film-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.cover-film-info{
+  display: none;
 }
 
 .fas.fa-star {
@@ -64,7 +79,7 @@
   display: flex;
 }
 
-.lingue{
-  /* border-radius: 100px; */
-  margin-top: 3px;
+.img-bandiera img{
+  width: 100%;
+  height: 100%;
 }
