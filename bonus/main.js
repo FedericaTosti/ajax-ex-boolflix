@@ -150,35 +150,22 @@ $(document).ready(function(){
         titoloOriginale = singoloTitolo.original_name;
       };
 
-      // controllo se titolo === titoloOriginale
-      if (titolo === titoloOriginale) {
+      // creo oggetto context che contiene tutti i dati tranne titoloOriginale
+      var context = {
+        "title" : titolo,
+        "vote" : votoInStelline(votoStelle),
+        "voteNumber" : singoloTitolo.vote_average,
+        "original_language" : linguaInBandierine(singoloTitolo.original_language),
+        "img" : "https://image.tmdb.org/t/p/w342" + singoloTitolo.poster_path,
+        "type" : genere,
+        "plot" : gestiscoOverview(singoloTitolo)
+        // "plot" : singoloTitolo.overview.substring(0, 470) + "[...]"
+      };
 
-        // se si creo oggetto context che contiene tutti i dati tranne titoloOriginale
-        var context = {
-          "title" : titolo,
-          "vote" : votoInStelline(votoStelle),
-          "voteNumber" : singoloTitolo.vote_average,
-          "original_language" : linguaInBandierine(singoloTitolo.original_language),
-          "img" : "https://image.tmdb.org/t/p/w342" + singoloTitolo.poster_path,
-          "type" : genere,
-          "plot" : gestiscoOverview(singoloTitolo)
-          // "plot" : singoloTitolo.overview.substring(0, 470) + "[...]"
-        };
-
-        // altrimenti modifico oggetto context aggiungendo titoloOriginale
-      } else{
-        context = {
-          "title" : titolo,
-          "TitoloOriginale" : "Titolo Originale: ",
-          "original_title" : titoloOriginale,
-          "vote" : votoInStelline(votoStelle),
-          "voteNumber" : singoloTitolo.vote_average,
-          "original_language" : linguaInBandierine(singoloTitolo.original_language),
-          "img" : "https://image.tmdb.org/t/p/w342" + singoloTitolo.poster_path,
-          "type" : genere,
-          "plot" : gestiscoOverview(singoloTitolo)
-          // "plot" : singoloTitolo.overview.substring(0, 470) + "[...]"
-        };
+      // se titolo !== titoloOriginale aggiungo anche titolo originale
+      if (titolo !== titoloOriginale) {
+        context.TitoloOriginale = "Titolo Originale: ";
+        context.original_title = titoloOriginale;
       }
 
       // se singoloTitolo non ha una copertina aggiungo io una copertina di default
